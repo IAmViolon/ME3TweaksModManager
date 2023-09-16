@@ -202,6 +202,11 @@
 	<system:String x:Key="string_notConfigured">Не настроено</system:String>
 	<system:String x:Key="string_reconfigurationRequired">Требуется перенастройка</system:String>
 	<system:String x:Key="string_interp_configuredTimestamp">Настроено {0}</system:String>
+	<system:String x:Key="string_uiImportInstallGroupPrefix" xml:space="preserve">Моды, которые будут установлены группой:\n</system:String>
+	<system:String x:Key="string_interp_xContentMod" xml:space="preserve">- {0} {1} (Контент-мод)\n</system:String>
+	<system:String x:Key="string_interp_xTextureMod" xml:space="preserve">- {0} (Текстурный мод)\n</system:String>
+	<system:String x:Key="string_interp_xASIMod" xml:space="preserve">- {0} (ASI-мод)\n</system:String>
+	<system:String x:Key="string_uiImportInstallGroupSuffix" xml:space="preserve">\nИмпортирование добавит данную группу установки в Batch Installer</system:String>
 	<system:String x:Key="string_batchModInstaller">Групповой Установщик Модов</system:String>
 	<system:String x:Key="string_description_batchModInstallerAllowsSerialInstall">Групповой Установщик Модов позволяет устанавливать группу модов подряд. позволяя быстро воссоздавать определенную конфигурацию игры.</system:String>
 	<system:String x:Key="string_createANewInstallGroup">Создать новую группу установки</system:String>
@@ -448,6 +453,8 @@
 	<system:String x:Key="string_debugReload">Перезагрузка отладки</system:String>
 	<system:String x:Key="string_deleteFromLibrary">Удалить из библиотеки</system:String>
 	<system:String x:Key="string_visitWebsite">Посетить веб-сайт</system:String>
+	<system:String x:Key="string_emailsNotMergedMessagesFileNotFound">Письма не объединены: Файл сообщений не найден</system:String>
+	<system:String x:Key="string_game2EmailMergeWrongGame">Манифест объединения писем Game 2 ссылается на неверную игру</system:String>
 	<system:String x:Key="string_autobootSave">Сохранение автозагрузки</system:String>
 	<system:String x:Key="string_interp_invalidTargetMissingFile">Недопустимый путь: {0} не обнаружен в папке игры.</system:String>
 	<system:String x:Key="string_invalidTargetProtectedByCmmvanilla">Недопустимый путь: Отмечен как архивный наличием файла cmm_vanilla</system:String>
@@ -641,6 +648,7 @@
 	<system:String x:Key="string_tooltip_disablesControllerVibration">Отключает вибрацию контроллера</system:String>
 	<system:String x:Key="string_dialog_firstCoalescedMerge" xml:space="preserve">ME3Tweaks Mod Manager автоматически заменяет  Coalesced_INT.bin файл базовой игры, чтобы моды могли использовать функцию Слияния LE1 Coalesced файлов. Установленные вручную/ отредактированные модами Coalesced_INT.bin файлы будут перезаписаны этой функцией; можно отключить в настройках мод-менеджера.\n\nОтключение функции Слияния LE1 Coalesced файлов испортит все моды, которые от неё зависят.</system:String>
 	<system:String x:Key="string_information">Информация</system:String>
+	<system:String x:Key="string_m3ConsoleKeybinds">M3 Console Keybinds</system:String>
 	<system:String x:Key="string_interp_lexNightlyFailedToDownload">Ошибка загрузки Legendary Explorer Nightly: {0}</system:String>
 	<system:String x:Key="string_licenseViewer">Licence Viewer</system:String>
 	<system:String x:Key="string_dialogCouldNotSetDataToClipboard" xml:space="preserve">Невозможно скопировать данные в буфер обмена:\n</system:String>
@@ -680,6 +688,15 @@
 	<system:String x:Key="string_selectAGameTargetToGenerateDiagnosticsFor">Выберите игру для диагностики</system:String>
 	<system:String x:Key="string_compressingForUpload">Сжатие для загрузки</system:String>
 	<system:String x:Key="string_uploadingToME3Tweaks">Загрузка на ME3Tweaks</system:String>
+	<system:String x:Key="string_noSaveSelected">Сохранение не выбрано</system:String>
+	<system:String x:Key="string_selectASaveToIncludeWithDiagnostic">Выбер сохранения для включения в диагностику</system:String>
+	<system:String x:Key="string_description_fullTexturesCheck">Полная проверка текстур может занять несколько минут, но проведет валидацию текстурных ссылок во всех пакетных файлах</system:String>
+	<system:String x:Key="string_saveFile">Файл сохранения</system:String>
+	<system:String x:Key="string_description_saveFile">Вы можете опционально включить ваш файл сохрания в диагностику игры. Требуется только выбор сохранения.</system:String>
+	<system:String x:Key="string_selectSaveFile">Выбор сохранения</system:String>
+	<system:String x:Key="string_importingSaveFileFromME3Tweaks">Импортирование файла сохранения из ME3Tweaks</system:String>
+	<system:String x:Key="string_importedSaveFileFromME3Tweaks">Файл сохранения их ME3Tweaks импортирован</system:String>
+	<system:String x:Key="string_interp_errorImportingSaveFileX">Ошибка импортирования файла сохранения: {0}</system:String>
 	<system:String x:Key="string_loadingME3TweaksServices">Загрузка служб ME3Tweaks</system:String>
 	<system:String x:Key="string_refreshingME3TweaksServices">Обновление служб ME3Tweaks</system:String>
 	<system:String x:Key="string_loadedME3TweaksServices">Загруженные службы ME3Tweaks</system:String>
@@ -1149,6 +1166,9 @@
 	<system:String x:Key="string_prerequesiteNotMet">Требования не соблюдены</system:String>
 	<system:String x:Key="string_dialog_errorGeneratingMergeDLC" xml:space="preserve">Ошибка генерации Merge DLC: {0}Моды могут работать неправильно - удалите вручную Merge DLC (если есть) через панель 'Настройка Игры'.</system:String>
 	<system:String x:Key="string_errorGeneratingMergeDLC">Ошибка генерации Merge DLC</system:String>
+	<system:String x:Key="string_someASIModsWereNotInstalled">Некоторые ASI-моды не были установлены; подробнее в логах</system:String>
+	<system:String x:Key="string_dialog_importedBatchInstallGroup">Группы установки можно найти в Batch Installer, расположенном в меню Управление Модами</system:String>
+	<system:String x:Key="string_installGroupImported">Группы установки импортированы</system:String>
 	<system:String x:Key="string_dialog_missingConfigFileForMEIM">Файл настроек Mass Effect {0}.ini отсутствует. Он должен находиться в {1}. Пожалуйста, хотя бы однократно запустите игру, чтобы сгенерировать файлы по умолчанию.</system:String>
 	<system:String x:Key="string_interp_dialogConfigDirectoryMissing">Директория Mass Effect Config отсутствует. Она должна находиться в {0}. Пожалуйста, хотя бы однократно запустите игру, чтобы сгенерировать файлы по умолчанию.</system:String>
 	<system:String x:Key="string_cannotRunMassEffectIniModder">Невозможно запустить Mass Effect Ini Modder</system:String>
@@ -1203,7 +1223,7 @@
 	<system:String x:Key="string_no">Нет</system:String>
 	<system:String x:Key="string_ok">OK</system:String>
 	<system:String x:Key="string_yes">Да</system:String>
-	<system:String x:Key="string_deployment_squadmateOutfitMerge">Squadmate Outfit Merge</system:String>
+	<system:String x:Key="string_deployment_squadmateOutfitMerge">Проверки Squadmate Outfit Merge</system:String>
 	<system:String x:Key="string_deployment_sqmIssuesDialogMessage">Следущие проблемы были обнаружены в отношении функции Squadmate Outfit Merge, используемой вашим модом в силу включения файла SquadmateMergeInfo.sqm.</system:String>
 	<system:String x:Key="string_deployment_sqmIssuesDialogTitle">Проблемы Squadmate Outfit Merge</system:String>
 	<system:String x:Key="string_deployment_sqmIssuesCheckInProgress">Проверка проблем Squadmate Outfit Merge</system:String>
@@ -1220,6 +1240,7 @@
 	<system:String x:Key="string_deployment_unusedExtraFileTypeFound">Вместе с модом может быть установлен {0}-файл: {1}. Данный файл следует удалить, так как он никогда не будет использован игрой. Если вы хотите включать дополнительные файлы типа этого, используйте 'additionaldeploymentfolder' из заголовка [UPDATES].</system:String>
 	<system:String x:Key="string_deployment_nexusUpdaterServiceInfo">{0} ({1}) не внесен в список разрешений NexusMods Updater Service. Данный мод должен быть в списке для возможности проверки обновлений (в силу архитектуры NexusMods API). Вы можете внести данный мод в список через ME3TweaksDiscord, в канале #nexusupdate-rules.</system:String>
 	<system:String x:Key="string_interp_compressedTlkDataInfo">Данный мод использует заголовок задания {0}. Была обнаружена сжатая версия xml-файлов ({1}); при преобразовании будет использован этот файл вместо отдельных xml-файлов. Если вы не предусматривали это, удалите сжатый файл и Mod Manager создаст новый при преобразовании.</system:String>
+	<system:String x:Key="string_interp_exceptionValidatingOutfitManifestMergeManifest">Ошибка валидации манифеста костюма: {0}: {1}</system:String>
 	<system:String x:Key="string_interp_appliesToX">Применяется к файлу {0}</system:String>
 	<system:String x:Key="string_interp_partOfX">Часть {0}</system:String>
 	<system:String x:Key="string_interp_versionX">Версия {0}</system:String>
@@ -1262,7 +1283,7 @@
 	<system:String x:Key="string_selectModsToImportIntoModManagerLibrary">Выбрать моды для импорта в библиотеку Mod Manager</system:String>
 	<system:String x:Key="string_noCompatibleModsFoundInArchive">В архиве не обнаружено совместимых модов</system:String>
 	<system:String x:Key="string_executableModsMustBeValidatedByME3Tweaks" xml:space="preserve">Моды в формате установочного файла должны пройти валидацию ME3Tweaks перед импортом в Mod Manager. Это сделано для предотвращения повреждения сторонних модов.\n\nЭтот установщик не прошел валидацию. Проверьте наличие совместимой с ME3Tweaks Mod Manager версии на странице мода или обратитесь за необходимой версией к разработчику.</system:String>
-	<system:String x:Key="string_noCompatibleModsFoundInArchiveOTExtended">В архиве не обнаружено совместимых модов. Если это текстурны моды, его требуется устанавливать через ALOT Installer. Если это известный мод для Mod Manager, пожалуйста обратитесь на ME3Tweaks Discord через меню Справка.</system:String>
+	<system:String x:Key="string_noCompatibleModsFoundInArchiveOTExtended">В архиве не обнаружено совместимых модов. Если это текстурный мод, его требуется устанавливать через ALOT Installer. Если это известный мод для Mod Manager, пожалуйста обратитесь на ME3Tweaks Discord через меню Справка.</system:String>
 	<system:String x:Key="string_noCompatibleModsFoundInArchiveLEExtended">В архиве не обнаружено совместимых модов. Если это текстурный мод, его требуется устанавливать через Mass Effect Modder. Если это известный мод для Mod Manager, пожалуйста обратитесь на ME3Tweaks Discord через меню Справка.</system:String>
 	<system:String x:Key="string_noCompatibleModsFoundInArchiveBothGensExtended">В архиве не обнаружено совместимых модов. Если это текстурны моды, его требуется устанавливать через ALOT Installer (OT) или Mass Effect Modder (LE). Если это известный мод для Mod Manager, пожалуйста обратитесь на ME3Tweaks Discord через меню Справка.</system:String>
 	<system:String x:Key="string_interp_scanningX">Сканирование {0}</system:String>
@@ -1306,6 +1327,9 @@
 	<system:String x:Key="string_description_blacklistedMod" xml:space="preserve">Разработчики ME3Tweaks Mod Manager внесли данный файл в черный список по одной из следующих причин:\n - Мод(ы) в данном файле не работает или заброшен\n - Мод(ы) в данном файле повреждает игру у конечных пользователей</system:String>
 	<system:String x:Key="string_interp_errorCreatingModFolderX">Произошла ошибка создания папки для данного мода: {0}</system:String>
 	<system:String x:Key="string_invalidServerModdesc">Для данного архива был предоставлен недопустимый moddesc сервера, пожалуйста отправьте Mgamerz ссылку на данный файл и сообщение об ошибке.</system:String>
+	<system:String x:Key="string_description_invalidBatchQueueArchive">Batch-группы установки должны быть преобразованы посредством ME3Tweaks Mod Manager для возможности их импортирования. Свяжитесь с разработчиком данного файла.</system:String>
+	<system:String x:Key="string_dialog_biqAlreadyExists">Группа установки с именем {0} уже существует. Импортирование данной группы перезапишет существующую.</system:String>
+	<system:String x:Key="string_installGroupAlreadyExists">Группа установки уже существует</system:String>
 	<system:String x:Key="string_dialog_mustBePremiumUserToDownload">Невозможно скачать файл: Необходимо иметь премиум-подписку NexusMods для использования прямых ссылок.</system:String>
 	<system:String x:Key="string_dialog_cannotDownloadDeletedFile">Невозможно скачать файл: Удалено с NexusMods</system:String>
 	<system:String x:Key="string_interp_errorDownloadingModX">Ошибка загрузки мода: {0}</system:String>
@@ -1765,6 +1789,7 @@
 	<system:String x:Key="string_oigPanelHeader" xml:space="preserve">Внутриигровой оверлей Origin является известной причиной значительной потери производительности в играх Mass Effect. Хотя он может быть отключен в настройках Origin, это не работает для Steam-версии Mass Effect 3. Вы можете установить d3d9-прокси, принудительно отключающий оверлей в целевой игре.&#10;&#10;Использование других d3d9-прокси, таких как Reshade, также отключит оверлей.</system:String>
 	<system:String x:Key="string_noOriginBasedTargetsInstalledForThisGame">Целевые игры Origin данного типа не установлены</system:String>
 	<system:String x:Key="string_deployment_mergemodPackageCheckingReferences">Проверка ссылок в mergemods [{0}/{1}]</system:String>
+	<system:String x:Key="string_interp_lecCouldNotResolveImport">Legendary Explorer Core не может совершить импорт: {0} {1} в {2}</system:String>
 	<system:String x:Key="string_syncingPlotManager">Синхронизация Plot Manager</system:String>
 	<system:String x:Key="string_interp_plotManagerSyncForX">Синхронизация PlotManager для {0}</system:String>
 	<system:String x:Key="string_interp_errorCompilingFunctionReason" xml:space="preserve">Ошибка компиляции функции {0}: {1}</system:String>
@@ -1853,6 +1878,8 @@
 	<system:String x:Key="string_synchronizingSquadmateOutfits">Синхронизация костюмов сопартийцев</system:String>
 	<system:String x:Key="string_synchronizedSquadmateOutfits">Костюмы сопартийцев синхронизированы</system:String>
 	<system:String x:Key="string_synchronizingSquadmateOutfitFiles">Синхронизация файлов костюмов сопартийцев</system:String>
+	<system:String x:Key="string_errorReadingSquadmateOutfitManifestFileSeeLogs">Ошибка чтения файла манифеста костюма сопартийца в некоторых модах, подробнее в логах</system:String>
+	<system:String x:Key="string_someSquadmateOutfitsWereNotMergedSeeLogs">Некоторые костюмы сопартийцев не были добавлены, подробнее в логах</system:String>
 	<system:String x:Key="string_interp_sk_sqmNoBackup">Нет доступного архива для {0}, невозможно сгенерировать файлы squadmate merge</system:String>
 	<system:String x:Key="string_interp_sk_sqmBackupMissingRequiredFile">Требуемый для squadmate merge файл недоступен в архиве: {0}</system:String>
 	<system:String x:Key="string_starterKitAddins">Добавления Starter Kit</system:String>
@@ -1960,6 +1987,8 @@
 	<system:String x:Key="string_hashingFiles">Хэширование файлов</system:String>
 	<system:String x:Key="string_creatingArchive">Создание архива</system:String>
 	<system:String x:Key="string_interp_cannotInstallTFCToBasegameLE1">Невозможно установить TLC {0} в /BIOGame/CookedPCConsole в LE1. Дополнительные TFC должны добавляться через папку CustomDLC.</system:String>
+	<system:String x:Key="string_interp_detectedTFCFromAnotherModTPMI">Обнаружен TFC-файл из другого мода: {0} ({1}). Подгрузка TFC из другого мода вызовет сбои во множестве средств моддинга и может исключить ваш мод из списка разрешенных для иморта из-за риска повреждения пользовательских установок. TFC-файлы зачастую исключаются из допустимых обновлений, ваш мод может быть удален с площадок за его включение. Не включайте TFC-файлы других модов в ваш мод.</system:String>
+	<system:String x:Key="string_interp_detectedTFCFromAnotherModUnknown">Обнаружен TFC-файл из другого DLC-мода: {0} ({1}). Подгрузка TFC из другого мода вызовет сбои во множестве средств моддинга и может исключить ваш мод из списка разрешенных для иморта из-за риска повреждения пользовательских установок. TFC-файлы зачастую исключаются из допустимых обновлений, ваш мод может быть удален с площадок за его включение. Не включайте TFC-файлы других модов в ваш мод.</system:String>
 	<system:String x:Key="string_preparingToInstallTextures">Подготовка установки текстур</system:String>
 	<system:String x:Key="string_installingTextureMods">Установка текстурных модов</system:String>
 	<system:String x:Key="string_installedTextureMods">Текстурные моды установлены</system:String>
